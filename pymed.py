@@ -8,5 +8,5 @@ results = pubmed.query("nutrition", max_results=100)
 
 # Process the results
 for article in results:
-    print(article.title)
-    print(article.abstract)
+    print(article.title)# Title of the article
+    print(article.abstract) #
