@@ -10,4 +10,4 @@ results = pubmed.query("prebiotic", max_results=100)
 for article in results:
     print(article.title)# Title of the article
     print(article.abstract) #
-#installed pymed pip
+#installed pymed
