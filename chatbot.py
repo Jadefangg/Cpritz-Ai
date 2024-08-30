@@ -1,10 +1,14 @@
 from flask import Flask, request, jsonify
 import json
+
 app = Flask(__name__)
 
 # Load article_data from the JSON file
-with open('article_data.json', 'r') as json_file:
-    article_data = json.load(json_file)
+try:
+    with open('article_data.json', 'r') as json_file:
+        article_data = json.load(json_file)
+except FileNotFoundError:
+    article_data = []
 
 # Search function
 def search_articles(query):
